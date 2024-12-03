@@ -1,6 +1,6 @@
 // import logo from './logo.svg';
 import './App.css';
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import cvData from "./cvData.js";
 
@@ -22,8 +22,8 @@ const Section = styled.div`
   margin-bottom: 20px;
 `;
 
+// color: #eee;
 const SectionTitle = styled.h2`
-  color: #333;
   border-bottom: 2px solid #0073e6;
   padding-bottom: 5px;
   font-size: 20px; /* Tamaño mayor para títulos */
@@ -50,11 +50,24 @@ const Description = styled.p`
 
 const CV = () => {
   const { personalInfo, profile, education, experience, projects, skills, languages } = cvData;
+  let [dark, setDark] = useState(false);
 
   return (
-    <CVContainer>
+    <CVContainer style={dark?
+      {backgroundColor: 'black', color: 'rgb(224,224,224)'}:
+      {backgroundColor: 'white', color: 'rgb(32,32,32)'}
+    }>
       <Section>
-        <h1>{personalInfo.name}</h1>
+        <div style={{display: 'flex', justifyContent: 'space-between'}}>
+          <h1>{personalInfo.name}</h1>
+          <div style={{
+            border: '1px solid gray', backgroundColor: 'gray', borderRadius: '16px', height: 'min-content', 
+            padding: '4px', cursor: 'pointer'
+          }} onClick={()=>setDark(!dark)} >
+            dark mode
+            <input type='checkbox' onChange={()=>setDark(!dark)} value={dark} checked={dark} style={{cursor:'pointer'}}/>
+          </div>
+        </div>
         <p><strong>{personalInfo.title}</strong></p>
         <p>{personalInfo.contact.phone} | {personalInfo.contact.email} | {personalInfo.contact.location}</p>
       </Section>
