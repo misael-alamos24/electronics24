@@ -40,12 +40,12 @@ const ListItem = styled.li`
   margin-bottom: 8px; /* Espaciado más compacto */
 `;
 
-const Description = styled.p`
-  font-size: 18px; /* Fuente más pequeña para descripciones */
-  line-height: 1.4;
-  margin: 5px 0;
-  text-align: left; /* Alineación a la izquierda */
-`;
+// const Description = styled.p`
+//   font-size: 18px; /* Fuente más pequeña para descripciones */
+//   line-height: 1.4;
+//   margin: 5px 0;
+//   text-align: left; /* Alineación a la izquierda */
+// `;
 
 
 const CV = () => {

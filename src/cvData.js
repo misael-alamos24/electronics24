@@ -3,7 +3,7 @@ const cvData = {
       name: "Santiago Misael Álamos Servián",
       title: "Técnico Electrónico. Desarrollador Full Stack.",
       contact: {
-        phone: <span><b>+541158774985</b> <a href="https://wa.me/+541158774985" target="_blank">WhatsApp</a></span>,
+        phone: <span><b>+541158774985</b> <a href="https://wa.me/+541158774985" rel="noreferrer" target="_blank">WhatsApp</a></span>,
         email: <a href="mailto:santiagoalamos2000@gmail.com">santiagoalamos2000@gmail.com</a>,
         // location: "[Ubicación opcional]"
       }
