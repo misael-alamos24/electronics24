@@ -54,7 +54,7 @@ const CV = () => {
 
   return (
     <CVContainer style={dark?
-      {backgroundColor: 'black', color: 'rgb(224,224,224)'}:
+      {backgroundColor: 'rgb(32,32,32)', color: 'rgb(224,224,224)'}:
       {backgroundColor: 'white', color: 'rgb(32,32,32)'}
     }>
       <Section>
